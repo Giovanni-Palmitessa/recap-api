@@ -13,17 +13,10 @@ export default {
   },
   methods: {
     getPosts() {
-      axios
-        .get("http://localhost:8000/api/posts", {
-          params: {
-            // page: this.currentPage,
-            // q: new URLSearchParams(window.location.search).get("q"),
-          },
-        })
-        .then((response) => {
-          this.arrPosts = response.data.results.data;
-          //   this.nPages = response.data.results.last_page;
-        });
+      axios.get("http://localhost:8000/api/posts").then((response) => {
+        this.arrPosts = response.data.results;
+        //   this.nPages = response.data.results.last_page;
+      });
     },
   },
   created() {
