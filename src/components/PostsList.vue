@@ -16,7 +16,7 @@ export default {
       axios
         .get("http://localhost:8000/api/posts", {
           params: {
-            page: this.currentPage,
+            // page: this.currentPage,
             // q: new URLSearchParams(window.location.search).get("q"),
           },
         })
@@ -34,6 +34,7 @@ export default {
 </script>
 
 <template>
+  <h1>Posts List</h1>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 mb-5">
     <div class="col" v-for="post in arrPosts" :key="post.id">
       <PostCard :objPost="post" />

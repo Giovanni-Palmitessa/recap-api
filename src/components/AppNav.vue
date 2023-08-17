@@ -30,6 +30,11 @@ export default {};
               >About</router-link
             >
           </li>
+          <li class="nav-item">
+            <router-link :to="{ name: 'index' }" class="nav-link"
+              >Index</router-link
+            >
+          </li>
         </ul>
       </div>
     </div>
